@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <title>مغامرات قوقو – Qoqo Adventures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- شاشة البداية -->
+  <div id="start-screen" class="screen">
+    <img src="images/start-background.jpg" id="start-bg" alt="start-bg">
+    <div class="ui onStart">
+      <img src="images/settings-icon.png" id="settings-btn" class="icon top-right" alt="settings">
+      <div id="title">مغامرات قوقو – Qoqo Adventures</div>
+      <div id="subtitle">مغامرة شيقة في عالم قوقو</div>
+
+      <div class="start-buttons">
+        <img src="images/start-arabic-icon.png" id="start-ar" class="start-btn" alt="ابدأ عربي">
+        <img src="images/start-english-icon.png" id="start-en" class="start-btn hidden" alt="Start EN">
+      </div>
+
+      <img src="images/exit.png" id="exit-btn" class="icon bottom-right" alt="exit">
+    </div>
+  </div>
+
+  <!-- إعدادات -->
+  <div id="settings-screen" class="screen hidden">
+    <img src="images/setting-bg.png" class="settings-bg" alt="settings-bg">
+    <div class="settings-panel">
+      <div class="settings-row">
+        <div>اللغة • Language</div>
+        <div>
+          <img src="images/language-arabic-icon.png" id="lang-ar-btn" class="small-btn" alt="AR">
+          <img src="images/language-english-icon.png" id="lang-en-btn" class="small-btn hidden" alt="EN">
+        </div>
+      </div>
+
+      <div class="settings-row">
+        <div>الصوت • Sound</div>
+        <div>
+          <img src="images/sound-on.png" id="sound-on-btn" class="small-btn" alt="sound on">
+          <img src="images/sound-off.png" id="sound-off-btn" class="small-btn hidden" alt="sound off">
+        </div>
+      </div>
+
+      <div class="settings-row">
+        <button id="settings-back">رجوع • Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- قائمة المراحل -->
+  <div id="levels-screen" class="screen hidden">
+    <div class="levels-panel">
+      <h2>المراحل • Levels</h2>
+      <div class="levels-list">
+        <div class="level-item" data-level="1">
+          <img src="images/forest-background.jpg" alt="">
+          <div>الفصل 1</div>
+        </div>
+        <div class="level-item locked" data-level="2">
+          <img src="images/snow-background.jpg" alt="">
+          <img src="images/lock.png" class="lock" alt="locked">
+          <div>الفصل 2</div>
+        </div>
+        <div class="level-item locked" data-level="3">
+          <img src="images/Mountains-background.jpg" alt="">
+          <img src="images/lock.png" class="lock" alt="locked">
+          <div>الفصل 3</div>
+        </div>
+        <div class="level-item locked" data-level="4">
+          <img src="images/monster-background.jpg" alt="">
+          <img src="images/lock.png" class="lock" alt="locked">
+          <div>الفصل 4</div>
+        </div>
+        <div class="level-item locked" data-level="5">
+          <img src="images/finall-background.jpg" alt="">
+          <img src="images/lock.png" class="lock" alt="locked">
+          <div>الفصل 5</div>
+        </div>
+      </div>
+      <button id="levels-back">رجوع</button>
+    </div>
+  </div>
+
+  <!-- شاشة اللعب -->
+  <div id="game-screen" class="screen hidden">
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud">
+      <div id="lives-area"></div>
+      <div id="score-area">🍓 <span id="score">0</span></div>
+      <div id="level-area">المستوى <span id="level">1</span>/5</div>
+    </div>
+
+    <div id="in-game-buttons">
+      <img src="images/exit.png" id="in-exit" class="icon small" alt="exit">
+      <img src="images/repeat.png" id="in-repeat" class="icon small" alt="repeat">
+    </div>
+  </div>
+
+  <!-- شاشة النتيجة -->
+  <div id="end-screen" class="screen hidden">
+    <img src="images/win.png" id="end-bg" alt="win">
+    <div class="end-panel">
+      <h2 id="end-title"></h2>
+      <button id="to-levels">قائمة المراحل</button>
+      <button id="retry">إعادة المحاولة</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
